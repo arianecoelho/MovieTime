@@ -5,6 +5,7 @@
  */
 package visão;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +19,8 @@ public class TelaLogin extends javax.swing.JFrame {
      */
     public TelaLogin() {
         initComponents();
+        
+        this.dispose();
     }
 
     /**
@@ -82,6 +85,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jLabelFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/MOVIe time.png"))); // NOI18N
         jLabelFundoLogin.setText("Usuário");
+        jLabelFundoLogin.setFocusCycleRoot(true);
         getContentPane().add(jLabelFundoLogin);
         jLabelFundoLogin.setBounds(0, 0, 500, 500);
 
@@ -101,6 +105,12 @@ public class TelaLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"Senha ou Usuário Invalidos!");
         }
        
+      JOptionPane.showMessageDialog(null, "Seja Bem Vindo","Inicio",JOptionPane.ERROR_MESSAGE,new ImageIcon("C:\\Users\\ariani\\Documents\\NetBeansProjects"
+              + "\\SysMovie\\SysMovie\\src\\imagens\\3d.png"));
+
+       
+        
+        
     }//GEN-LAST:event_jButtonAcessarActionPerformed
 
     private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
@@ -151,4 +161,9 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordFieldSenha;
     private javax.swing.JTextField jTextFieldUsuário;
     // End of variables declaration//GEN-END:variables
+
+    private static class JavaApplication1 {
+
+       
+    }
 }

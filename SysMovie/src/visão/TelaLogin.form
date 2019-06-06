@@ -109,6 +109,7 @@
           <Image iconType="3" name="/imagens/MOVIe time.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Usu&#xe1;rio"/>
+        <Property name="focusCycleRoot" type="boolean" value="true"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
