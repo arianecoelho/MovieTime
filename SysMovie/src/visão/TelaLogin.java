@@ -105,8 +105,7 @@ public class TelaLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"Senha ou Usuário Invalidos!");
         }
        
-      JOptionPane.showMessageDialog(null, "Seja Bem Vindo","Inicio",JOptionPane.ERROR_MESSAGE,new ImageIcon("C:\\Users\\ariani\\Documents\\NetBeansProjects"
-              + "\\SysMovie\\SysMovie\\src\\imagens\\3d.png"));
+      JOptionPane.showMessageDialog(null, "Seja Bem Vindo","Inicio",JOptionPane.ERROR_MESSAGE,new ImageIcon("C:\\Users\\lidxa\\Desktop\\MOVIE TIME\\SysMovie\\SysMovie\\src\\imagens\\3d.png"));
 
        
         
