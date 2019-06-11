@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package visão;
-
+import DAO.Conexao;
+import DAO.ClienteDAO;
+import Modelo.Cliente;
+import java.sql.Connection;
+import javax.swing.JOptionPane;
 /**
  *
  * @author lidxa
@@ -16,6 +20,7 @@ public class FromCliente extends javax.swing.JFrame {
      */
     public FromCliente() {
         initComponents();
+        setTitle("Cadastrar Cliente");
     }
 
     /**
@@ -32,13 +37,13 @@ public class FromCliente extends javax.swing.JFrame {
         jPanelCadClientee = new javax.swing.JPanel();
         jLabelCod = new javax.swing.JLabel();
         jLabelNome = new javax.swing.JLabel();
-        jTextFieldNome = new javax.swing.JTextField();
+        jTF_Nome = new javax.swing.JTextField();
         jTextFieldCod = new javax.swing.JTextField();
         jLabelLogin = new javax.swing.JLabel();
-        jTextFieldLogin = new javax.swing.JTextField();
+        jTF_Login = new javax.swing.JTextField();
         jLabelSenha = new javax.swing.JLabel();
-        jPasswordSenha = new javax.swing.JPasswordField();
-        jButtonLimpar = new javax.swing.JButton();
+        jTF_Senha = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
         jButtonCadastrar = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
 
@@ -69,13 +74,23 @@ public class FromCliente extends javax.swing.JFrame {
         jLabelSenha.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSenha.setText("Senha:");
 
-        jPasswordSenha.setText("jPasswordField1");
+        jTF_Senha.setText("jPasswordField1");
 
-        jButtonLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/trash-bin.png"))); // NOI18N
-        jButtonLimpar.setToolTipText("LIMPAR");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/trash-bin.png"))); // NOI18N
+        jButton1.setToolTipText("LIMPAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButtonCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/users.png"))); // NOI18N
         jButtonCadastrar.setToolTipText("CADASTRAR");
+        jButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastrarActionPerformed(evt);
+            }
+        });
 
         jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cogwheel.png"))); // NOI18N
         jButtonCancelar.setToolTipText("CANCELAR");
@@ -94,15 +109,15 @@ public class FromCliente extends javax.swing.JFrame {
                             .addComponent(jLabelLogin)
                             .addComponent(jLabelNome)
                             .addComponent(jLabelSenha)
-                            .addComponent(jButtonLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTF_Nome, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldCod, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPasswordSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTF_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTF_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
                         .addGap(132, 132, 132)
                         .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -120,21 +135,20 @@ public class FromCliente extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelNome)
-                    .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTF_Nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelLogin)
-                    .addComponent(jTextFieldLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jTF_Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
                         .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPasswordSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTF_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                         .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -177,6 +191,40 @@ public class FromCliente extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
+        // TODO add your handling code here:
+        String nome = jTF_Nome.getText();
+        String login = jTF_Login.getText();
+        String senha = jTF_Senha.getText();
+        
+        if(nome.equals("") || login.equals("") || senha.equals("")){
+            JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!", "Video Locadora", JOptionPane.WARNING_MESSAGE);
+        }else{
+            Connection con = Conexao.AbrirConexao();
+            ClienteDAO sql = new ClienteDAO(con);
+            Cliente f = new Cliente();
+            
+            f.setNome(nome);
+            f.setLogin(login);
+            f.setSenha(senha);
+            
+            sql.Inserir_Funcionario(f);
+            Conexao.FecharConexao(con);
+            
+            jTF_Nome.setText("");
+            jTF_Login.setText("");
+            jTF_Senha.setText("");
+            
+            JOptionPane.showMessageDialog(null, "Cadastro Realizado ","Video Locadora", JOptionPane.INFORMATION_MESSAGE );
+            dispose();
+    }//GEN-LAST:event_jButtonCadastrarActionPerformed
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            jTF_Nome.setText("");
+            jTF_Login.setText("");
+            jTF_Senha.setText("");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -213,9 +261,9 @@ public class FromCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonCadastrar;
     private javax.swing.JButton jButtonCancelar;
-    private javax.swing.JButton jButtonLimpar;
     private javax.swing.JLabel jLabelCadastroClientes;
     private javax.swing.JLabel jLabelCod;
     private javax.swing.JLabel jLabelLogin;
@@ -223,9 +271,9 @@ public class FromCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JPanel jPanelCadCliente;
     private javax.swing.JPanel jPanelCadClientee;
-    private javax.swing.JPasswordField jPasswordSenha;
+    private javax.swing.JTextField jTF_Login;
+    private javax.swing.JTextField jTF_Nome;
+    private javax.swing.JPasswordField jTF_Senha;
     private javax.swing.JTextField jTextFieldCod;
-    private javax.swing.JTextField jTextFieldLogin;
-    private javax.swing.JTextField jTextFieldNome;
     // End of variables declaration//GEN-END:variables
 }
