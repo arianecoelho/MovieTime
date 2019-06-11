@@ -43,9 +43,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItemCadSala = new javax.swing.JMenuItem();
-        jMenuItemCadGerente = new javax.swing.JMenuItem();
+        jMenuItemCadCliente = new javax.swing.JMenuItem();
         jMenuItemCadUsuários = new javax.swing.JMenuItem();
-        jMenuRelatorios = new javax.swing.JMenu();
         jMenuFerramentas = new javax.swing.JMenu();
         jMenuItemTelaBemVindo = new javax.swing.JMenuItem();
         jMenuSair = new javax.swing.JMenu();
@@ -66,7 +65,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanelInternal.setLayout(null);
 
         jButtonCadGerente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/chair.png"))); // NOI18N
-        jButtonCadGerente.setToolTipText("Gerente");
+        jButtonCadGerente.setToolTipText("CLIENTES");
         jButtonCadGerente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButtonCadGerenteMouseClicked(evt);
@@ -81,27 +80,28 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButtonCadGerente.setBounds(100, 40, 80, 80);
 
         jButtonCadSala.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/audience.png"))); // NOI18N
-        jButtonCadSala.setToolTipText("Salas");
+        jButtonCadSala.setToolTipText("SALAS");
+        jButtonCadSala.setBorderPainted(false);
         jPanelInternal.add(jButtonCadSala);
         jButtonCadSala.setBounds(270, 40, 80, 80);
 
-        jLabelCadastro.setFont(new java.awt.Font("Wide Latin", 0, 18)); // NOI18N
+        jLabelCadastro.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
         jLabelCadastro.setText("Cadastro:");
         jPanelInternal.add(jLabelCadastro);
-        jLabelCadastro.setBounds(230, 10, 160, 20);
+        jLabelCadastro.setBounds(260, 10, 100, 20);
 
         jButtonCadUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cinema (1).png"))); // NOI18N
-        jButtonCadUsuario.setToolTipText("Usuários");
+        jButtonCadUsuario.setToolTipText("USUÁRIOS");
         jPanelInternal.add(jButtonCadUsuario);
         jButtonCadUsuario.setBounds(440, 40, 80, 80);
 
-        jLabelAgenda.setFont(new java.awt.Font("Wide Latin", 1, 12)); // NOI18N
+        jLabelAgenda.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 12)); // NOI18N
         jLabelAgenda.setText("Agenda:");
         jPanelInternal.add(jLabelAgenda);
-        jLabelAgenda.setBounds(100, 130, 110, 20);
+        jLabelAgenda.setBounds(20, 180, 70, 20);
 
         jButtonAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/birthday-and-party.png"))); // NOI18N
-        jButtonAgenda.setToolTipText("Agendamento");
+        jButtonAgenda.setToolTipText("AGENDAMENTO");
         jPanelInternal.add(jButtonAgenda);
         jButtonAgenda.setBounds(100, 150, 80, 80);
 
@@ -112,13 +112,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jInternalFrameBemVindo.getContentPane().add(jPanelInternal);
         jPanelInternal.setBounds(-10, 40, 610, 240);
 
-        jLabelGerenciamento.setFont(new java.awt.Font("Wide Latin", 0, 18)); // NOI18N
+        jLabelGerenciamento.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 18)); // NOI18N
         jLabelGerenciamento.setText("Sistema de Gerenciamento:");
         jInternalFrameBemVindo.getContentPane().add(jLabelGerenciamento);
-        jLabelGerenciamento.setBounds(20, 4, 430, 20);
+        jLabelGerenciamento.setBounds(20, 4, 320, 20);
 
         jButtonFecharBemVindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon (1).png"))); // NOI18N
-        jButtonFecharBemVindo.setToolTipText("Fechar a Tela Bem-Vindo");
+        jButtonFecharBemVindo.setToolTipText("FECHAR");
         jButtonFecharBemVindo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonFecharBemVindoActionPerformed(evt);
@@ -144,8 +144,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuCadastro.add(jMenuItemCadSala);
 
-        jMenuItemCadGerente.setText("Gerente");
-        jMenuCadastro.add(jMenuItemCadGerente);
+        jMenuItemCadCliente.setText("Cliente");
+        jMenuItemCadCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadClienteActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuItemCadCliente);
 
         jMenuItemCadUsuários.setText("Usuários");
         jMenuItemCadUsuários.addActionListener(new java.awt.event.ActionListener() {
@@ -156,9 +161,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuCadastro.add(jMenuItemCadUsuários);
 
         jMenuBar1.add(jMenuCadastro);
-
-        jMenuRelatorios.setText("Relatórios");
-        jMenuBar1.add(jMenuRelatorios);
 
         jMenuFerramentas.setText("Ferramentas");
 
@@ -186,7 +188,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(816, 433));
+        setSize(new java.awt.Dimension(820, 433));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -221,6 +223,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         tela.setVisible(true);
         dispose();
     }//GEN-LAST:event_jMenuItemTelaBemVindoActionPerformed
+
+    private void jMenuItemCadClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemCadClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -273,12 +279,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastro;
     private javax.swing.JMenu jMenuFerramentas;
-    private javax.swing.JMenuItem jMenuItemCadGerente;
+    private javax.swing.JMenuItem jMenuItemCadCliente;
     private javax.swing.JMenuItem jMenuItemCadSala;
     private javax.swing.JMenuItem jMenuItemCadUsuários;
     private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JMenuItem jMenuItemTelaBemVindo;
-    private javax.swing.JMenu jMenuRelatorios;
     private javax.swing.JMenu jMenuSair;
     private javax.swing.JPanel jPanelInternal;
     // End of variables declaration//GEN-END:variables

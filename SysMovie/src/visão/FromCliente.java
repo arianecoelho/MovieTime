@@ -32,17 +32,15 @@ public class FromCliente extends javax.swing.JFrame {
         jPanelCadClientee = new javax.swing.JPanel();
         jLabelCod = new javax.swing.JLabel();
         jLabelNome = new javax.swing.JLabel();
-        jLabelIconCadCliente = new javax.swing.JLabel();
         jTextFieldNome = new javax.swing.JTextField();
         jTextFieldCod = new javax.swing.JTextField();
-        jLabelFaixaEtaria = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jLabelLogin = new javax.swing.JLabel();
+        jTextFieldLogin = new javax.swing.JTextField();
+        jLabelSenha = new javax.swing.JLabel();
+        jPasswordSenha = new javax.swing.JPasswordField();
+        jButtonLimpar = new javax.swing.JButton();
+        jButtonCadastrar = new javax.swing.JButton();
+        jButtonCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,103 +55,93 @@ public class FromCliente extends javax.swing.JFrame {
 
         jLabelCod.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
         jLabelCod.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelCod.setText("Cod:");
+        jLabelCod.setText("Código:");
 
         jLabelNome.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
         jLabelNome.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNome.setText("Nome:");
 
-        jLabelIconCadCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/game.png"))); // NOI18N
+        jLabelLogin.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
+        jLabelLogin.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelLogin.setText("Login:");
 
-        jLabelFaixaEtaria.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
-        jLabelFaixaEtaria.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelFaixaEtaria.setText("Faixa Etária:");
+        jLabelSenha.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
+        jLabelSenha.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSenha.setText("Senha:");
 
-        jLabel1.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Login:");
+        jPasswordSenha.setText("jPasswordField1");
 
-        jLabel2.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Senha:");
+        jButtonLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/trash-bin.png"))); // NOI18N
+        jButtonLimpar.setToolTipText("LIMPAR");
 
-        jPasswordField1.setText("jPasswordField1");
+        jButtonCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/users.png"))); // NOI18N
+        jButtonCadastrar.setToolTipText("CADASTRAR");
 
-        jButton1.setText("Limpar");
-
-        jButton2.setText("Cadastrar");
-
-        jButton3.setText("Cancelar");
+        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cogwheel.png"))); // NOI18N
+        jButtonCancelar.setToolTipText("CANCELAR");
 
         javax.swing.GroupLayout jPanelCadClienteeLayout = new javax.swing.GroupLayout(jPanelCadClientee);
         jPanelCadClientee.setLayout(jPanelCadClienteeLayout);
         jPanelCadClienteeLayout.setHorizontalGroup(
             jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCadClienteeLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(jLabelIconCadCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
                 .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCadClienteeLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(114, 114, 114)
                         .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCadClienteeLayout.createSequentialGroup()
-                                .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabelNome)
-                                    .addComponent(jLabelCod, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabelCod)
+                            .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
+                                .addGap(2, 2, 2)
                                 .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextFieldCod, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
-                                        .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextFieldNome, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabelFaixaEtaria))))
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addGap(130, 130, 130))
-            .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
-                .addGap(168, 168, 168)
-                .addComponent(jButton1)
-                .addGap(179, 179, 179)
-                .addComponent(jButton2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jLabelLogin)
+                                    .addComponent(jLabelNome)
+                                    .addComponent(jLabelSenha)))))
+                    .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(jButtonLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldCod, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPasswordSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
+                        .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(118, 118, 118))))
         );
         jPanelCadClienteeLayout.setVerticalGroup(
             jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
-                .addGap(73, 73, 73)
+                .addGap(47, 47, 47)
                 .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelCod)
                     .addComponent(jTextFieldCod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8)
-                .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelIconCadCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
-                        .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelNome)
-                            .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelFaixaEtaria))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(58, 58, 58)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addContainerGap(114, Short.MAX_VALUE))
+                    .addComponent(jLabelNome)
+                    .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelLogin)
+                    .addComponent(jTextFieldLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(134, 134, 134)
+                .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonCadastrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCadClienteeLayout.createSequentialGroup()
+                        .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanelCadClienteLayout = new javax.swing.GroupLayout(jPanelCadCliente);
@@ -161,28 +149,28 @@ public class FromCliente extends javax.swing.JFrame {
         jPanelCadClienteLayout.setHorizontalGroup(
             jPanelCadClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCadClienteLayout.createSequentialGroup()
-                .addContainerGap(319, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelCadastroClientes)
-                .addGap(270, 270, 270))
-            .addComponent(jPanelCadClientee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(248, 248, 248))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCadClienteLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanelCadClientee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanelCadClienteLayout.setVerticalGroup(
             jPanelCadClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCadClienteLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabelCadastroClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanelCadClientee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelCadClientee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelCadCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(571, 571, 571))
+            .addComponent(jPanelCadCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,7 +179,7 @@ public class FromCliente extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(919, 518));
+        setSize(new java.awt.Dimension(732, 518));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -231,21 +219,19 @@ public class FromCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton jButtonCadastrar;
+    private javax.swing.JButton jButtonCancelar;
+    private javax.swing.JButton jButtonLimpar;
     private javax.swing.JLabel jLabelCadastroClientes;
     private javax.swing.JLabel jLabelCod;
-    private javax.swing.JLabel jLabelFaixaEtaria;
-    private javax.swing.JLabel jLabelIconCadCliente;
+    private javax.swing.JLabel jLabelLogin;
     private javax.swing.JLabel jLabelNome;
+    private javax.swing.JLabel jLabelSenha;
     private javax.swing.JPanel jPanelCadCliente;
     private javax.swing.JPanel jPanelCadClientee;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField jPasswordSenha;
     private javax.swing.JTextField jTextFieldCod;
+    private javax.swing.JTextField jTextFieldLogin;
     private javax.swing.JTextField jTextFieldNome;
     // End of variables declaration//GEN-END:variables
 }
