@@ -64,7 +64,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanelInternal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanelInternal.setLayout(null);
 
-        jButtonCadGerente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/chair.png"))); // NOI18N
+        jButtonCadGerente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/chair (1).png"))); // NOI18N
         jButtonCadGerente.setToolTipText("CLIENTES");
         jButtonCadGerente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -79,7 +79,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanelInternal.add(jButtonCadGerente);
         jButtonCadGerente.setBounds(100, 40, 80, 80);
 
-        jButtonCadSala.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/audience.png"))); // NOI18N
+        jButtonCadSala.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/3d_1.png"))); // NOI18N
         jButtonCadSala.setToolTipText("SALAS");
         jButtonCadSala.setBorderPainted(false);
         jPanelInternal.add(jButtonCadSala);
@@ -90,7 +90,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanelInternal.add(jLabelCadastro);
         jLabelCadastro.setBounds(260, 10, 100, 20);
 
-        jButtonCadUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cinema (1).png"))); // NOI18N
+        jButtonCadUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/buildings.png"))); // NOI18N
         jButtonCadUsuario.setToolTipText("USUÁRIOS");
         jPanelInternal.add(jButtonCadUsuario);
         jButtonCadUsuario.setBounds(440, 40, 80, 80);
@@ -100,7 +100,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanelInternal.add(jLabelAgenda);
         jLabelAgenda.setBounds(20, 180, 70, 20);
 
-        jButtonAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/birthday-and-party.png"))); // NOI18N
+        jButtonAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/archive.png"))); // NOI18N
         jButtonAgenda.setToolTipText("AGENDAMENTO");
         jPanelInternal.add(jButtonAgenda);
         jButtonAgenda.setBounds(100, 150, 80, 80);
@@ -115,7 +115,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabelGerenciamento.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 18)); // NOI18N
         jLabelGerenciamento.setText("Sistema de Gerenciamento:");
         jInternalFrameBemVindo.getContentPane().add(jLabelGerenciamento);
-        jLabelGerenciamento.setBounds(20, 4, 320, 20);
+        jLabelGerenciamento.setBounds(150, 10, 320, 20);
 
         jButtonFecharBemVindo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon (1).png"))); // NOI18N
         jButtonFecharBemVindo.setToolTipText("FECHAR");
@@ -144,6 +144,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuCadastro.add(jMenuItemCadSala);
 
+        jMenuItemCadCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/chair_1.png"))); // NOI18N
         jMenuItemCadCliente.setText("Cliente");
         jMenuItemCadCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,7 +210,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCadGerenteMouseClicked
 
     private void jButtonCadGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadGerenteActionPerformed
-        // TODO add your handling code here:
+     FromCliente obj = new FromCliente();
+     obj.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButtonCadGerenteActionPerformed
 
     private void jButtonFecharBemVindoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFecharBemVindoActionPerformed
@@ -225,7 +227,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemTelaBemVindoActionPerformed
 
     private void jMenuItemCadClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadClienteActionPerformed
-        // TODO add your handling code here:
+    new FromCliente().setVisible(true);      // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemCadClienteActionPerformed
 
     /**
