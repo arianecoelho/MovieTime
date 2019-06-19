@@ -36,7 +36,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButtonCadUsuario = new javax.swing.JButton();
         jLabelAgenda = new javax.swing.JLabel();
         jButtonAgenda = new javax.swing.JButton();
-        jLabelImagemPainel = new javax.swing.JLabel();
         jLabelGerenciamento = new javax.swing.JLabel();
         jButtonFecharBemVindo = new javax.swing.JButton();
         jLabelFundoTelaPrincipal = new javax.swing.JLabel();
@@ -105,10 +104,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanelInternal.add(jButtonAgenda);
         jButtonAgenda.setBounds(100, 150, 80, 80);
 
-        jLabelImagemPainel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo_telaprincipal.jpg"))); // NOI18N
-        jPanelInternal.add(jLabelImagemPainel);
-        jLabelImagemPainel.setBounds(10, 0, 600, 240);
-
         jInternalFrameBemVindo.getContentPane().add(jPanelInternal);
         jPanelInternal.setBounds(-10, 40, 610, 240);
 
@@ -128,7 +123,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButtonFecharBemVindo.setBounds(550, 0, 40, 30);
 
         getContentPane().add(jInternalFrameBemVindo);
-        jInternalFrameBemVindo.setBounds(100, 20, 610, 310);
+        jInternalFrameBemVindo.setBounds(80, 20, 610, 310);
 
         jLabelFundoTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/8757bc0b7c5e69d.jpg"))); // NOI18N
         getContentPane().add(jLabelFundoTelaPrincipal);
@@ -277,7 +272,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFundoPainel;
     private javax.swing.JLabel jLabelFundoTelaPrincipal;
     private javax.swing.JLabel jLabelGerenciamento;
-    private javax.swing.JLabel jLabelImagemPainel;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastro;
     private javax.swing.JMenu jMenuFerramentas;
