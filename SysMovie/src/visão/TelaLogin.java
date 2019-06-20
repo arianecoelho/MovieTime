@@ -87,7 +87,7 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabelFundoLogin.setText("Usuário");
         jLabelFundoLogin.setFocusCycleRoot(true);
         getContentPane().add(jLabelFundoLogin);
-        jLabelFundoLogin.setBounds(0, 0, 500, 500);
+        jLabelFundoLogin.setBounds(0, -10, 500, 510);
 
         setBounds(0, 0, 514, 540);
     }// </editor-fold>//GEN-END:initComponents
@@ -105,10 +105,7 @@ public class TelaLogin extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this,"Senha ou Usuário Invalidos!");
         }
-       
-     
-
-       
+    
         
         
     }//GEN-LAST:event_jButtonAcessarActionPerformed
