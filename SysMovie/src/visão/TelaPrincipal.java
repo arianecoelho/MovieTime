@@ -5,6 +5,11 @@
  */
 package visão;
 
+import visao.Alterar.AlterarCliente;
+import visao.Consultar.NewJFrameConsultar;
+import visao.Excluir.ExcluirCliente;
+import visão.Menu; 
+
 /**
  *
  * @author lidxa
@@ -46,12 +51,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItemCadUsuários = new javax.swing.JMenuItem();
         jMenuFerramentas = new javax.swing.JMenu();
         jMenuItemTelaBemVindo = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenuSair = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
 
         jLabelFundoPainel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo_telaprincipal.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImages(null);
         getContentPane().setLayout(null);
 
         jInternalFrameBemVindo.setResizable(true);
@@ -101,6 +111,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jButtonAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/archive.png"))); // NOI18N
         jButtonAgenda.setToolTipText("AGENDAMENTO");
+        jButtonAgenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAgendaActionPerformed(evt);
+            }
+        });
         jPanelInternal.add(jButtonAgenda);
         jButtonAgenda.setBounds(100, 150, 80, 80);
 
@@ -125,7 +140,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jInternalFrameBemVindo);
         jInternalFrameBemVindo.setBounds(80, 20, 610, 310);
 
-        jLabelFundoTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/8757bc0b7c5e69d.jpg"))); // NOI18N
+        jLabelFundoTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo_telaprincipal.jpg"))); // NOI18N
         getContentPane().add(jLabelFundoTelaPrincipal);
         jLabelFundoTelaPrincipal.setBounds(0, 0, 800, 375);
 
@@ -169,6 +184,34 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuFerramentas.add(jMenuItemTelaBemVindo);
 
         jMenuBar1.add(jMenuFerramentas);
+
+        jMenu1.setText("Cliente");
+
+        jMenuItem1.setText("Consultar");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Alterar");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuItem3.setText("Excluir");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu1);
 
         jMenuSair.setText("Sair");
 
@@ -225,6 +268,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
     new FromCliente().setVisible(true);      // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemCadClienteActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+         new AlterarCliente().setVisible(true); 
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        new ExcluirCliente().setVisible(true); 
+         
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+                new NewJFrameConsultar().setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jButtonAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgendaActionPerformed
+        // TODO add your handling code here:
+       Menu obj = new Menu();
+       obj.setVisible(true);
+    }//GEN-LAST:event_jButtonAgendaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -272,9 +336,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFundoPainel;
     private javax.swing.JLabel jLabelFundoTelaPrincipal;
     private javax.swing.JLabel jLabelGerenciamento;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastro;
     private javax.swing.JMenu jMenuFerramentas;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItemCadCliente;
     private javax.swing.JMenuItem jMenuItemCadSala;
     private javax.swing.JMenuItem jMenuItemCadUsuários;

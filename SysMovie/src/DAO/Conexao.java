@@ -17,18 +17,18 @@ public class Conexao {
      
    
     public static Connection AbrirConexao(){
-        Connection con = null;
+        Connection Con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             String url="jdbc:mysql://127.0.0.1:3333/projeto_cinema?useTimezone=true&serverTimezone=UTC";
-            con= DriverManager.getConnection(url,"root","admin");
+            Con= DriverManager.getConnection(url,"root","admin");
             
         }catch (Exception e){
             JOptionPane.showMessageDialog(null, "ERRO ao conectar ao banco de dados");
             e.getMessage();
             
         }
-    return con;
+    return Con;
 }
     public static void FecharConexao(Connection con) {
         

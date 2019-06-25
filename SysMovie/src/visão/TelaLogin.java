@@ -83,7 +83,7 @@ public class TelaLogin extends javax.swing.JFrame {
         getContentPane().add(jButtonAcessar);
         jButtonAcessar.setBounds(230, 390, 77, 30);
 
-        jLabelFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/MOVIe time.png"))); // NOI18N
+        jLabelFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/MOVIe_time.png"))); // NOI18N
         jLabelFundoLogin.setText("Usuário");
         jLabelFundoLogin.setFocusCycleRoot(true);
         getContentPane().add(jLabelFundoLogin);
@@ -142,10 +142,8 @@ public class TelaLogin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaLogin().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new TelaLogin().setVisible(true);
         });
     }
 

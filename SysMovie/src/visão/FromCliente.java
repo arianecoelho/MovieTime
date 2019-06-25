@@ -140,13 +140,13 @@ public class FromCliente extends javax.swing.JFrame {
                 .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelLogin)
                     .addComponent(jTF_Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelCadClienteeLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
                         .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTF_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 243, Short.MAX_VALUE)
+                            .addComponent(jLabelSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTF_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 218, Short.MAX_VALUE)
                         .addGroup(jPanelCadClienteeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -201,27 +201,28 @@ public class FromCliente extends javax.swing.JFrame {
         String senha = jTF_Senha.getText();
         
         if(nome.equals("") || login.equals("") || senha.equals("")){
-            JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!", "Video Locadora", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Nenhum campo pode estar vazio!", "Cinema", JOptionPane.WARNING_MESSAGE);
         }else{
             Connection con = Conexao.AbrirConexao();
             ClienteDAO sql = new ClienteDAO(con);
-            Cliente f = new Cliente();
+            Cliente c = new Cliente();
             
-            f.setNome(nome);
-            f.setLogin(login);
-            f.setSenha(senha);
+            c.setNome(nome);
+            c.setLogin(login);
+            c.setSenha(senha);
             
-            sql.Inserir_Cliente(f);
+            sql.Inserir_Cliente(c);
             Conexao.FecharConexao(con);
             
             jTF_Nome.setText("");
             jTF_Login.setText("");
             jTF_Senha.setText("");
             
-            JOptionPane.showMessageDialog(null, "Cadastro Realizado ","Video Locadora", JOptionPane.INFORMATION_MESSAGE );
+            JOptionPane.showMessageDialog(null, "Cadastro Realizado ","Cinema", JOptionPane.INFORMATION_MESSAGE );
             dispose();
+        }
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
-    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
             jTF_Nome.setText("");
             jTF_Login.setText("");
@@ -262,6 +263,7 @@ public class FromCliente extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new FromCliente().setVisible(true);
             }
