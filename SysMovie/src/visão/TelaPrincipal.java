@@ -46,9 +46,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabelFundoTelaPrincipal = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuCadastro = new javax.swing.JMenu();
-        jMenuItemCadSala = new javax.swing.JMenuItem();
         jMenuItemCadCliente = new javax.swing.JMenuItem();
-        jMenuItemCadUsuários = new javax.swing.JMenuItem();
         jMenuFerramentas = new javax.swing.JMenu();
         jMenuItemTelaBemVindo = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
@@ -146,14 +144,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuCadastro.setText("Cadastros");
 
-        jMenuItemCadSala.setText("Sala");
-        jMenuItemCadSala.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemCadSalaActionPerformed(evt);
-            }
-        });
-        jMenuCadastro.add(jMenuItemCadSala);
-
         jMenuItemCadCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/chair_1.png"))); // NOI18N
         jMenuItemCadCliente.setText("Cliente");
         jMenuItemCadCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -162,14 +152,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenuCadastro.add(jMenuItemCadCliente);
-
-        jMenuItemCadUsuários.setText("Usuários");
-        jMenuItemCadUsuários.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemCadUsuáriosActionPerformed(evt);
-            }
-        });
-        jMenuCadastro.add(jMenuItemCadUsuários);
 
         jMenuBar1.add(jMenuCadastro);
 
@@ -187,6 +169,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenu1.setText("Cliente");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_go.png"))); // NOI18N
         jMenuItem1.setText("Consultar");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,6 +178,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_edit.png"))); // NOI18N
         jMenuItem2.setText("Alterar");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,6 +187,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem2);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_delete.png"))); // NOI18N
         jMenuItem3.setText("Excluir");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,14 +215,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(820, 433));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItemCadSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadSalaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemCadSalaActionPerformed
-
-    private void jMenuItemCadUsuáriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadUsuáriosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemCadUsuáriosActionPerformed
 
     private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
         System.exit(0);
@@ -344,8 +321,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItemCadCliente;
-    private javax.swing.JMenuItem jMenuItemCadSala;
-    private javax.swing.JMenuItem jMenuItemCadUsuários;
     private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JMenuItem jMenuItemTelaBemVindo;
     private javax.swing.JMenu jMenuSair;

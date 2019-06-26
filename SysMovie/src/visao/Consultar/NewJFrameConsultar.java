@@ -166,7 +166,15 @@ public class NewJFrameConsultar extends javax.swing.JFrame {
             new String [] {
                 "Código", "Nome", "Login", "Senha"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane3.setViewportView(jTable1);
 
         jPanel2.setBackground(new java.awt.Color(102, 0, 0));

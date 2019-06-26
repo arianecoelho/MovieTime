@@ -62,12 +62,13 @@ public final class Menu extends javax.swing.JFrame {
 
     void AgregarAComboboxPelicula() {
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
-        modelo.addElement("Seleccione");
-        modelo.addElement("Viernes 13");
-        modelo.addElement("La masacre en texas 3");
-        modelo.addElement("Cars 3");
-        modelo.addElement("Spider-Man");
-        modelo.addElement("Batman");
+        modelo.addElement("Selecione");
+        modelo.addElement("Vingadores: Ultimato");
+        modelo.addElement("Toy Story 4");
+        modelo.addElement("Homem-Aranha: Longe de Casa");
+        modelo.addElement("Como Treinar o seu Dragão 3 ");
+        modelo.addElement("Pets – A Vida Secreta dos Bichos 2");
+         modelo.addElement("Aquaman");
 
         jComboBoxPeliculas.setModel(modelo);
 
@@ -76,7 +77,7 @@ public final class Menu extends javax.swing.JFrame {
     void seleccionPelicula() {
         int combo;
         combo = jComboBoxPeliculas.getSelectedIndex();
-        if (combo == 1 || combo == 2 || combo == 3 || combo == 4 || combo == 5) {
+        if (combo == 1 || combo == 2 || combo == 3 || combo == 4 || combo == 5 || combo==6) {
             Activar();
             MenoresEdad();
         } else {
@@ -100,65 +101,78 @@ public final class Menu extends javax.swing.JFrame {
             case 1: {
                 LimCantidad();
                 Preview.jLabelSala.setText("4");
-                ImageIcon i = new ImageIcon("src/com/nic/pelis/Viernes13.jpg");
+                ImageIcon i = new ImageIcon("src/com/nic/pelis/ultimato.jpg");
                 jLabelPelicula.setIcon(i);
                 DefaultComboBoxModel modelo = new DefaultComboBoxModel();
                 modelo.addElement("Seleccione");
-                modelo.addElement("4:00 pm");
-                modelo.addElement("6:00 pm");
-                modelo.addElement("8:00 pm");
+                modelo.addElement("16:00");
+                modelo.addElement("19:00");
+                modelo.addElement("21:30");
                 jComboBoxHora.setModel(modelo);
                 break;
             }
             case 2: {
                 LimCantidad();
                 Preview.jLabelSala.setText("2");
-                ImageIcon i = new ImageIcon("src/com/nic/pelis/masacre.jpg");
+                ImageIcon i = new ImageIcon("src/com/nic/pelis/tou.jpg");
                 jLabelPelicula.setIcon(i);
                 DefaultComboBoxModel modelo = new DefaultComboBoxModel();
                 modelo.addElement("Seleccione");
-                modelo.addElement("5:00 pm");
-                modelo.addElement("7:00 pm");
-                modelo.addElement("9:00 pm");
+                modelo.addElement("14:00");
+                modelo.addElement("19:00 ");
+                modelo.addElement("17:00");
                 jComboBoxHora.setModel(modelo);
                 break;
             }
             case 3: {
                 LimCantidad();
                 Preview.jLabelSala.setText("3");
-                ImageIcon i = new ImageIcon("src/com/nic/pelis/cars.jpg");
+                ImageIcon i = new ImageIcon("src/com/nic/pelis/aranha.jpg");
                 jLabelPelicula.setIcon(i);
                 DefaultComboBoxModel modelo = new DefaultComboBoxModel();
                 modelo.addElement("Seleccione");
-                modelo.addElement("12:00 pm");
-                modelo.addElement("2:00 pm");
-                modelo.addElement("4:00 pm");
+                modelo.addElement("12:00");
+                modelo.addElement("2:00");
+                modelo.addElement("4:00");
                 jComboBoxHora.setModel(modelo);
                 break;
             }
             case 4: {
                 LimCantidad();
                 Preview.jLabelSala.setText("5");
-                ImageIcon i = new ImageIcon("src/com/nic/pelis/spider.jpg");
+                ImageIcon i = new ImageIcon("src/com/nic/pelis/dragão.jpg");
                 jLabelPelicula.setIcon(i);
                 DefaultComboBoxModel modelo = new DefaultComboBoxModel();
                 modelo.addElement("Seleccione");
-                modelo.addElement("1:00 pm");
-                modelo.addElement("3:00 pm");
-                modelo.addElement("6:30 pm");
+                modelo.addElement("13:00");
+                modelo.addElement("15:00 pm");
+                modelo.addElement("18:30 pm");
                 jComboBoxHora.setModel(modelo);
                 break;
             }
             case 5: {
                 LimCantidad();
                 Preview.jLabelSala.setText("1");
-                ImageIcon i = new ImageIcon("src/com/nic/pelis/bat.png");
+                ImageIcon i = new ImageIcon("src/com/nic/pelis/pets.jpg");
                 jLabelPelicula.setIcon(i);
                 DefaultComboBoxModel modelo = new DefaultComboBoxModel();
                 modelo.addElement("Seleccione");
-                modelo.addElement("2:00 pm");
-                modelo.addElement("5:00 pm");
-                modelo.addElement("8:00 pm");
+                modelo.addElement("9:00");
+                modelo.addElement("19:00");
+                modelo.addElement("17:00");
+                jComboBoxHora.setModel(modelo);
+                break;
+            }
+            case 6: {
+                LimCantidad();
+                Preview.jLabelSala.setText("6");
+                ImageIcon i = new ImageIcon("src/com/nic/pelis/aquman.jpg");
+                jLabelPelicula.setIcon(i);
+                DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+                modelo.addElement("Seleccione");
+                modelo.addElement("15:30");
+                modelo.addElement("20:30");
+                modelo.addElement("00:00");
                 jComboBoxHora.setModel(modelo);
                 break;
             }
@@ -219,20 +233,21 @@ public final class Menu extends javax.swing.JFrame {
 
     void MenoresEdad() {
         int combo = jComboBoxPeliculas.getSelectedIndex();
-        if (combo == 1 || combo == 2) {
+        if (combo == 7 || combo == 8) {
             jLabelMenores.setVisible(true);
             jTextFieldCantidadDeBoletosNiños.setVisible(false);
-            jLabelMenores.setText("No apta para menores de edad");
+            jLabelMenores.setText("Não é apta para menores de idade");
         }
-        if (combo == 3 || combo == 4 || combo == 5) {
+        if (combo ==1 || combo == 2 ||combo == 3 || combo == 4 || combo == 5 || combo ==6) {
             jTextFieldCantidadDeBoletosNiños.setVisible(true);
             jLabelMenores.setVisible(false);
         }
     }
     
+    
     void tarjeta(){
         if (jRadioButtonTCredito.isSelected()) {
-            Preview.jTextFieldEfectivoRecibido.setText("Paga con tarjeta");
+            Preview.jTextFieldEfectivoRecibido.setText("Pague com cartão");
             Preview.jTextFieldEfectivoRecibido.setEditable(false);
             Preview.jLabel14.setVisible(false);
             Preview.jButton3.setVisible(false);
@@ -282,7 +297,6 @@ public final class Menu extends javax.swing.JFrame {
         jLabelMenores = new javax.swing.JLabel();
         jLabelPelicula = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -348,6 +362,11 @@ public final class Menu extends javax.swing.JFrame {
         jLabel2.setText("Filmes");
 
         jComboBoxHora.setBackground(new java.awt.Color(204, 255, 255));
+        jComboBoxHora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxHoraActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -369,6 +388,7 @@ public final class Menu extends javax.swing.JFrame {
         jLabel8.setText("Preço das Crianças");
 
         jLabelPrecio2DNiños.setFont(new java.awt.Font("Ubuntu Condensed", 0, 14)); // NOI18N
+        jLabelPrecio2DNiños.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPrecio2DNiños.setText("10");
 
         jLabel11.setFont(new java.awt.Font("Ubuntu Condensed", 1, 14)); // NOI18N
@@ -454,8 +474,6 @@ public final class Menu extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Crianças");
 
-        jLabelMenores.setText("jLabel6");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -503,7 +521,7 @@ public final class Menu extends javax.swing.JFrame {
                                     .addComponent(jTextFieldCantidadDeBoletosNiños, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jLabel15))
                             .addGap(37, 37, 37))))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -553,27 +571,23 @@ public final class Menu extends javax.swing.JFrame {
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(23, 23, 23)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBoxPeliculas, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxPeliculas, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
+                                .addGap(117, 117, 117)
                                 .addComponent(jLabel2)))
-                        .addGap(33, 33, 33)
+                        .addGap(63, 63, 63)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jComboBoxHora, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jToggleButtonEncender, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jComboBoxHora, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jToggleButtonEncender, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabelPelicula, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(26, 26, 26)
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -583,43 +597,27 @@ public final class Menu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBoxPeliculas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jToggleButtonEncender))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBoxHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelPelicula, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBoxPeliculas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jToggleButtonEncender))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabelPelicula, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel7, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
-
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/approve.png"))); // NOI18N
-        jMenu1.setText("Bem Vindo");
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jMenu1MouseEntered(evt);
-            }
-        });
-        jMenu1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu1ActionPerformed(evt);
-            }
-        });
-        jMenuBar1.add(jMenu1);
-
         setJMenuBar(jMenuBar1);
 
         pack();
@@ -633,14 +631,6 @@ public final class Menu extends javax.swing.JFrame {
         seleccionPelicula();
         caratulas();
     }//GEN-LAST:event_jComboBoxPeliculasActionPerformed
-
-    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-
-    }//GEN-LAST:event_jMenu1ActionPerformed
-
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
-      
-    }//GEN-LAST:event_jMenu1MouseClicked
 
     private void jButtonContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonContinuarActionPerformed
         if (jComboBoxPeliculas.getSelectedIndex() == 0 || jComboBoxHora.getSelectedIndex() == 0 || jTextFieldCantidadDeBoletosAdultos.getText().length() == 0) {
@@ -660,10 +650,6 @@ public final class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldCantidadDeBoletosAdultosActionPerformed
 
-    private void jMenu1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseEntered
-        
-    }//GEN-LAST:event_jMenu1MouseEntered
-
     private void jRadioButtonEfectivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEfectivoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButtonEfectivoActionPerformed
@@ -672,6 +658,10 @@ public final class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
          dispose();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jComboBoxHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxHoraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxHoraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -730,7 +720,6 @@ public final class Menu extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabelPelicula;
     private javax.swing.JLabel jLabelPrecio2DAdulto;
     private javax.swing.JLabel jLabelPrecio2DNiños;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
